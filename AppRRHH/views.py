@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import HttpResponse,HttpRequest
 from AppRRHH.models import Empresa,Empleado,Tarea,ConvenioColectivo
 from .forms import EmpresaFormulario, EmpleadoFormulario,TareaFormulario,ConvenioColectivoFormulario
 
@@ -73,3 +74,17 @@ def conveniosFormulario(request):
         convFormulario = ConvenioColectivoFormulario()
         return render(request, "conveniosFormulario.html", {"convFormulario":convFormulario})
     
+    
+def busquedaEmpleados(request):
+    return render(request,"busquedaEmpleados.html")
+    
+def buscar(request:HttpRequest):
+    try:
+        if request.GET["busca_nombre"]:
+            nombre = request.GET["busca_nombre"]
+            
+            empleado = Empleado.objects.get(nombre=nombre)
+            return render(request, "resultadosBusqueda.html", {"Empleado": empleado})
+   
+    except:     
+        return HttpResponse ("El empleado que está buscando no existe")

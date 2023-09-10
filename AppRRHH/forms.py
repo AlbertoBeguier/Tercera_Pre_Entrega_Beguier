@@ -4,7 +4,7 @@ from django import forms
 class EmpresaFormulario(forms.Form):
     nombre = forms.CharField(max_length=50, label="Nombre", widget=forms.TextInput(attrs={'class': 'alineacion-horizontal'}))
     cuit = forms.IntegerField(label="CUIT", widget=forms.TextInput(attrs={'class': 'alineacion-horizontal'}))
-    actividad_Principal = forms.CharField(max_length=50 , label="Actividad Principal", widget=forms.TextInput(attrs={'class': 'alineacion-horizontal'}))
+    actividadPrincipal = forms.CharField(max_length=50 , label="Actividad Principal", widget=forms.TextInput(attrs={'class': 'alineacion-horizontal'}))
     
 class EmpleadoFormulario(forms.Form):
     nombre = forms.CharField(max_length=50, label="Nombre", widget=forms.TextInput(attrs={'class': 'alineacion-horizontal'}))

@@ -1,6 +1,6 @@
 
 from django.urls import path
-from AppRRHH.views import inicio,listaEmpresas,listaEmpleados,listaTareas,listaConveniosColectivos,empresasFormulario,empleadosFormulario,tareasFormulario,conveniosFormulario
+from AppRRHH.views import inicio,listaEmpresas,listaEmpleados,listaTareas,listaConveniosColectivos,empresasFormulario,empleadosFormulario,tareasFormulario,conveniosFormulario,busquedaEmpleados,buscar
 from AppRRHH.forms import EmpresaFormulario, EmpleadoFormulario, TareaFormulario, ConvenioColectivoFormulario
 
 
@@ -14,4 +14,6 @@ urlpatterns = [
     path('empleadoFormularios/',empleadosFormulario, name="EmpleadoFormularios"),
     path('tareaFormularios/',tareasFormulario, name="TareaFormularios"),
     path('convenioFormularios/',conveniosFormulario, name="ConvenioFormularios"),
+    path('busquedaEmpleados/',busquedaEmpleados, name="BusquedaEmpleados"),
+    path('buscar/',buscar, name="Buscar"),
 ]

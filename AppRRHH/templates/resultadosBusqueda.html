@@ -1,2 +1,35 @@
+{% extends 'padre.html' %}
 
+
+{% block contenidoQueCambia %}
+
+
+
+    <p> Resultado de la busqueda del empleado</p>
+
+    
+    {% if empleado  %}
+
+    <ul>
+            
+            {% for emp in empleado %}
+
+            <li> {{emp}}</li>
+                
+            {% endfor %}
+                
+
+    
+    </ul>
+        
+    {% endif %}
+        
+    
+    
+
+
+   
+
+    
+{% endblock contenidoQueCambia %}
     

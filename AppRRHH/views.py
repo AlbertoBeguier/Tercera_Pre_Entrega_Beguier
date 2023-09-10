@@ -83,8 +83,8 @@ def buscar(request:HttpRequest):
         if request.GET["busca_nombre"]:
             nombre = request.GET["busca_nombre"]
             
-            empleado = Empleado.objects.get(nombre=nombre)
-            return render(request, "resultadosBusqueda.html", {"Empleado": empleado})
+            empleado = Empleado.objects.filter(nombre__icontains=nombre)
+            return render(request, "resultadosBusqueda.html", {"empleado": empleado})
    
     except:     
         return HttpResponse ("El empleado que está buscando no existe")

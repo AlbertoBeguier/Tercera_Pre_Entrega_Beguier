@@ -1,0 +1,22 @@
+{% extends 'padre.html' %}
+
+
+{% block contenidoQueCambia %}
+
+
+    <form action="{% url 'EmpleadoFormularios' %}" method="post"> {% csrf_token %} 
+
+        <div class="tituloCrear">
+            <h4> Usted está agregando un nuevo colaborador </h4>
+        
+        <br>
+        {{ empleadFormulario.as_p}}
+        <br>
+
+        <button type="submit"> Grabar </button>
+         </div>
+    </form>
+
+
+   
+{% endblock contenidoQueCambia %}

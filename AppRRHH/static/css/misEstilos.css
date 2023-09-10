@@ -1,0 +1,31 @@
+.frase_inicio{
+    color:rgb(138, 82, 13);
+    text-align: center;
+}
+
+.titulo_listas{
+    color:rgb(7, 6, 60);
+    text-align: left;
+    padding-left: 68px;
+    
+}
+
+.listas{
+    color:rgb(138, 82, 13);
+    text-align: left;
+    padding-left: 50px;
+}
+
+
+.tituloCrear{
+    color:rgb(2, 36, 8);
+    text-align: left;
+    padding-left: 50px;
+}
+
+/* Alinea los campos input de los formularios horizontalmente */
+.alineacion-horizontal {
+    display: flex;
+    justify-content: space-between;
+}
+

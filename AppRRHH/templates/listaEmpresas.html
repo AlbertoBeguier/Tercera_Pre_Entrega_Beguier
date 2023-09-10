@@ -1,0 +1,24 @@
+{% extends 'padre.html' %}
+
+
+{% block contenidoQueCambia %}
+
+    <br>
+    
+    <div class="titulo_listas">
+    <h4> Listado de empresas </h4>
+   </div>
+    <div class="listas">
+
+     {% for empresa in listaEmpresas %}
+
+        <ul >
+
+            <li > {{empresa.nombre}} -- {{empresa.cuit}} </li>
+
+        </ul>
+        
+    {% endfor %}
+    </div>
+    
+{% endblock contenidoQueCambia %}

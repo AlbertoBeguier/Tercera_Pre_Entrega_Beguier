@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {%load static %}
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Admin RRHH</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/iconoestudio.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+        <link href="{% static 'css/misEstilos.css' %}" rel="stylesheet" />
+
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="/AppRRHH/">Inicio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                     
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Agregar</a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{% url 'EmpresaFormularios' %}">Empresa</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item" href="{% url 'EmpleadoFormularios' %}" style="color:rgb(138, 82, 13)"> <strong>Empleado</strong></a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item" href="{% url 'TareaFormularios' %}" >Tarea</a></li>
+                                <li><a class="dropdown-item" href="{% url 'ConvenioFormularios' %}">CCT</a></li>
+
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-item"><a class="nav-link" href="#">Buscar </a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Modificar </a></li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Listar</a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{% url 'Empresas' %}">Empresas</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item" href="{% url 'Empleados' %}" style="color:rgb(138, 82, 13)"> <strong>Empleados</strong></a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item" href="{% url 'Tareas' %}" >Tareas</a></li>
+                                <li><a class="dropdown-item" href="{% url 'ConveniosColectivos' %}">Convenios</a></li>
+
+                            </ul>
+                        </li>
+
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><u>Enlaces Externos</u></a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="https://www.afip.gob.ar/landing/default.asp" target="_blank">AFIP</a></li>
+                                <li><a class="dropdown-item" href="https://www.anses.gob.ar/" target="_blank">ANSeS</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item" href="https://www.argentina.gob.ar/trabajo" target="_blank">MTEySS</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Page content-->
+        <div class="container">
+            <div class="text-center mt-5">
+                <h1 style="color:rgb(5, 5, 94);font-size:150%;">Administración de Recursos Humanos</h1>
+                <p class="lead"> <strong> ABM & búsqueda de datos </strong> </p>
+                <p><strong> Sistema AlBeg v.1.0.0 </strong> </p>
+                <br>
+                
+            </div>
+        </div>
+
+
+<div>
+
+
+    {% block contenidoQueCambia %}
+                    
+    {% endblock contenidoQueCambia %}
+
+</div>
+      
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+
+        <!-- Footer-->
+        <footer class="footer bg-light">
+            <div class="container">
+                <div class="row">
+                    <br>  <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
+                        <ul class="list-inline mb-2">
+                           
+                            <li class="list-inline-item"><a href="#!">Contacto</a></li>
+                            <li class="list-inline-item">⋅</li>
+                            <li class="list-inline-item"><a href="#!">Términos de Uso</a></li>
+                            <li class="list-inline-item">⋅</li>
+                            <li class="list-inline-item"><a href="#!">Política de Privacidad</a></li>
+                        </ul>
+                        <p class="text-muted small mb-4 mb-lg-0">&copy; Sistema AlBeg 2023. Todos los derechos reservados.</p>
+
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script> 
+    </body>
+
+
+</html>

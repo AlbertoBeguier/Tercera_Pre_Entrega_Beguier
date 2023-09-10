@@ -1,0 +1,24 @@
+{% extends 'padre.html' %}
+
+
+{% block contenidoQueCambia %}
+
+    <br>
+    
+    <div class="titulo_listas">
+    <h4> Listado de Convenios Colectivos </h4>
+   </div>
+    <div class="listas">
+
+     {% for con in listaConveniosColectivos %}
+
+        <ul >
+
+            <li > {{con.nro_cct}} -- {{con.nombre_cct}}</li>
+
+        </ul>
+        
+    {% endfor %}
+    </div>
+    
+{% endblock contenidoQueCambia %}

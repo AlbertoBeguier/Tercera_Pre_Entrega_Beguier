@@ -1,0 +1,22 @@
+{% extends 'padre.html' %}
+
+
+{% block contenidoQueCambia %}
+
+
+    <form action="{% url 'TareaFormularios' %}" method="post"> {% csrf_token %} 
+
+        <div class="tituloCrear">
+            <h4> Usted está agregando una nueva tarea </h4>
+        
+        <br>
+        {{ tarFormulario.as_p}}
+        <br>
+
+        <button type="submit"> Grabar </button>
+         </div>
+    </form>
+
+
+   
+{% endblock contenidoQueCambia %}
